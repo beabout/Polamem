@@ -6,7 +6,7 @@
 </div>
 
 <button class='x-element' style={ `width: ${grown ? 98 : 10}%; height: ${grown ? 98 : 10}%; left: ${grown ? 1 : 45}%; top: ${grown ? 1 : 45}%;`} onclick={() => grown=!grown}>
-  CLICK ME!
+  CLICK
 </button>
 
 <style>
@@ -27,7 +27,7 @@
   }
 
   button {
-    color: #2B50AA;
-    background-color: inherit;
+    color: #FF9FE5;
+    background-color: #2B50AA;
   }
 </style>
