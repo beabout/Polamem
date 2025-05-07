@@ -1,2 +1,45 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script module lang="ts">
+	// module-level logic goes here
+	// (you will rarely use this)
+  let count = $state(0);
+  let grown = $state(false);
+
+</script>
+
+<script lang="ts">
+	// instance-level logic goes here
+</script>
+
+<!-- markup (zero or more items) goes here -->
+
+<div class='x-element' style={ `padding: 0; width: ${grown ? 180 : 20}%; height: ${grown ? 180 : 20}%; left: ${grown ? -40 : 40}%; top: ${grown ? -40 : 40}%;`}>
+</div>
+
+<button class='x-element' style={ `width: ${grown ? 98 : 10}%; height: ${grown ? 98 : 10}%; left: ${grown ? 1 : 45}%; top: ${grown ? 1 : 45}%;`} onclick={() => grown=!grown}>
+	CLICK ME!
+</button>
+
+<style>
+  :global(body) {
+    background-color: #F2F0EF;
+  }
+  .x-element {
+    transition: top 1s,
+      left 1s,
+      width 1s,
+      height 1s,
+      font-size 1s;
+
+    position: absolute;
+    padding: 1rem;
+    border: 2px black solid;
+    border-radius: 0.25rem;
+    font-weight: 800;
+  }
+
+  button {
+    color: #23C70D;
+    background-color: #FC7753;
+    border: 2px #23C70D solid !important;
+  }
+</style>
