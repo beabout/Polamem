@@ -1,5 +1,5 @@
 <script module lang="ts">
-  import { Forward, Grid } from '$lib'
+  import { Forward, Left, Grid } from '$lib'
 </script>
 
 <script lang="ts">
@@ -7,9 +7,10 @@
 </script>
 
 <!-- markup (zero or more items) goes here -->
- <Grid/>
-
- <Forward />
+ 
+<Grid/>
+<Forward />
+<Left />
 
 <style>
   :global(body) {
