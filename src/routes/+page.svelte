@@ -4,6 +4,7 @@
   let count = $state(0);
   let grown = $state(false);
 
+  import { Grid } from '$lib'
 </script>
 
 <script lang="ts">
@@ -11,7 +12,8 @@
 </script>
 
 <!-- markup (zero or more items) goes here -->
-
+ <Grid/>
+ 
 <div class='x-element' style={ `padding: 0; width: ${grown ? 180 : 20}%; height: ${grown ? 180 : 20}%; left: ${grown ? -40 : 40}%; top: ${grown ? -40 : 40}%;`}>
 </div>
 
