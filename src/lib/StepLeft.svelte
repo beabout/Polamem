@@ -2,29 +2,46 @@
   let shifted = $state(false);
 </script>
  
-<div class='x-element' style={ `padding: 0; width: 90%; height: 90%; left: ${shifted ? -100 : 5}%; top: 5%`}>
+<div class='content-section x-element' style={ `left: ${shifted ? -100 : 2}%;`}>
 </div>
 
-<button class='x-element' style={ `width: 20%; height: 20%; left: ${shifted ? 1 : 40}%; top: 40%;`} onclick={() => shifted=!shifted}>
-	CLICK ME!
+<div class='content-section x-element' style={ `left: ${shifted ? 2 : 100 }%;`}>
+</div>
+
+<button class='x-element' style={ `width: 10%; height: 10%; left: ${shifted ? 1 : 89}%; top: 45%;`} onclick={() => shifted=!shifted}>
+	{#if shifted}
+  	Last Page
+  {:else}
+    Next Page
+  {/if}
 </button>
 
 <style>
   :global(body) {
     background-color: #F2F0EF;
   }
+
+  .content-section {
+    padding: 0;
+    width: 96%;
+    height: 96%; 
+    top: 2%;
+    border: 4px #2B50AA solid;
+    border-radius: 0.25rem;
+    background-color: #2B50AA;
+  }
+
   .x-element {
     transition: left 2s;
 
     position: absolute;
-    padding: 1rem;
-    border: 4px #2B50AA solid;
-    border-radius: 0.25rem;
     font-weight: 800;
   }
 
   button {
+    border: 4px #2B50AA solid;
+    border-radius: 0.25rem;
     color: #2B50AA;
-    background-color: #FF9FE5;
+    background-color: #FF9FE5 !important;
   }
 </style>
